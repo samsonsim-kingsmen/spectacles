@@ -218,25 +218,26 @@ export default function App() {
           const zMultiplier = 2.8;
           
           // Map to Three.js world coordinates
+          const zScale = videoAspect / 1.7777; // Normalize MediaPipe's raw Z (normalized to width) relative to the height scale
           const EL_World = new THREE.Vector3(
             (adjL.x - 0.5) * visibleWidthRange,
             (0.5 - adjL.y) * visibleHeightRange,
-            -eyeL.z * visibleWidthRange * zMultiplier + faceZ
+            -eyeL.z * zScale * visibleWidthRange * zMultiplier + faceZ
           );
           const ER_World = new THREE.Vector3(
             (adjR.x - 0.5) * visibleWidthRange,
             (0.5 - adjR.y) * visibleHeightRange,
-            -eyeR.z * visibleWidthRange * zMultiplier + faceZ
+            -eyeR.z * zScale * visibleWidthRange * zMultiplier + faceZ
           );
           const NB_World = new THREE.Vector3(
             (adjNB.x - 0.5) * visibleWidthRange,
             (0.5 - adjNB.y) * visibleHeightRange,
-            -L168.z * visibleWidthRange * zMultiplier + faceZ
+            -L168.z * zScale * visibleWidthRange * zMultiplier + faceZ
           );
           const F_World = new THREE.Vector3(
             (adjF.x - 0.5) * visibleWidthRange,
             (0.5 - adjF.y) * visibleHeightRange,
-            -L10.z * visibleWidthRange * zMultiplier + faceZ
+            -L10.z * zScale * visibleWidthRange * zMultiplier + faceZ
           );
           
           // Formulate rotation basis vectors
