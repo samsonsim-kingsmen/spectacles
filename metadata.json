@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Parametric Spectacles2",
+  "description": "A real-time parametric 3D spectacles frame generator using React Three Fiber with customizable lens shapes, thicknesses, and curves.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
