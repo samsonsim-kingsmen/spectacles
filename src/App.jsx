@@ -341,9 +341,7 @@ export default function App() {
             right: 0,
             height: '48px',
             padding: '0 16px',
-            background: cameraActive 
-              ? 'linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%)' 
-              : 'none',
+            background: 'none',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
